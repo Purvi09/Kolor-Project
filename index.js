@@ -64,11 +64,10 @@ let c = 10;
         })
     }
 function pickcolor() {
-    var random = Math.floor(Math.random() * 7);
+    var random = Math.floor(Math.random() * 6);
     return colors[random];
 }
 function timer1(){
-    if(round<=20){
     c=c-1;
     if(c<=10){
         timer.textContent=c;
@@ -83,9 +82,10 @@ function timer1(){
         pickedColor = pickcolor();
         display.style.backgroundColor = pickedColor;
         for (var j = 0; j < 6; j++) {
-            circles[j].style.backgroundColor = colors[j];}}
-
+            circles[j].style.backgroundColor = colors[j];
+        }
     }
+
 }
     update=setInterval("timer1()",1000)
 
